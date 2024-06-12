@@ -1,0 +1,37 @@
+let xbolinha = 100;
+let ybolinha = 200;
+let diametro = 15;
+
+let velocidadexbolinha = 6;
+let velocidadeybolinha = 6;
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(0);
+  circle( xbolinha, ybolinha, diametro)
+  //xbolinha += velocidadexbolinha
+  ybolinha += velocidadeybolinha
+  
+ if (xbolinha>width || xbolinha < 0) { 
+velocidadexbolinha *= -1;
+ }
+ 
+ if (ybolinha>height || ybolinha < 0) {
+velocidadeybolinha *= -1;
+}
+}
+ function mostraRaquete (){
+     rect( xRaquete, yRaquete, raqueteComprimento, RaqueteAltura) ;
+ }
+
+   function movimentaMinhaRaquete() {
+     if (keyisdown(up_arrow)){
+     yraquete -= 10;}
+}
+ if (keyisDown(down_arrow)) {
+   yraquete += 10;
+}
+  <script scr="p5 .collide2d.js" ></script>
+  
